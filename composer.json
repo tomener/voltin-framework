@@ -1,0 +1,16 @@
+{
+    "name": "tomener/voltin-framework",
+    "description": "voltin is a Simple Fast Smart PHP FrameWork",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tomener",
+            "email": "863758705@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0"
+    }
+}

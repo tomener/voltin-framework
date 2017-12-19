@@ -3,6 +3,7 @@
     "description": "voltin is a Simple Fast Smart PHP FrameWork",
     "type": "project",
     "license": "MIT",
+    "homepage": "https://www.voltin.cn",
     "authors": [
         {
             "name": "tomener",

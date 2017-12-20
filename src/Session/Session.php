@@ -1,19 +1,19 @@
 <?php
 /**
- * Voltin a Fast Simple Smart PHP FrameWork
+ * voltin a Fast Simple Smart PHP FrameWork
  * Author: Tommy 863758705@qq.com
  * Link: http://www.TimoPHP.com/
  * Since: 2016
  */
 
-namespace Voltin\Core;
+namespace Voltin\Session;
 
 
 use Voltin\Config\Config;
 use Voltin\Exception\CoreException;
 
 /**
- * 会员处理类
+ * 会话类
  *
  * Class Session
  * @package Voltin\Core

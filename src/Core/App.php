@@ -1,6 +1,6 @@
 <?php
 /**
- * Voltin a Fast Simple Smart PHP FrameWork
+ * voltin a Fast Simple Smart PHP FrameWork
  * Author: Tommy 863758705@qq.com
  * Link: http://www.TimoPHP.com/
  * Since: 2016
@@ -69,6 +69,16 @@ class App
         if ($data != null) {
             Response::send($data, Response::type());
         }
+    }
+
+    /**
+     * voltin版本
+     *
+     * @return string
+     */
+    public static function version()
+    {
+        return '2.0.2';
     }
 
     /**
@@ -168,7 +178,15 @@ class App
     private function loadClass($class_name)
     {
         $class_name = str_replace('\\', DIRECTORY_SEPARATOR, $class_name);
-        $class_file = ROOT_PATH . $class_name . '.php';
+        $pos = strpos($class_name, DIRECTORY_SEPARATOR);
+        $space = substr($class_name, 0, $pos);
+
+        if ($space == 'Voltin') {
+            $class_name = substr($class_name, $pos + 1);
+            $class_file = LIBRARY_PATH . $class_name . '.php';
+        } else {
+            $class_file = ROOT_PATH . $class_name . '.php';
+        }
 
         if (!file_exists($class_file)) {
             throw new CoreException('[loadClass] class ' . $class_file . ' not found.', 404);

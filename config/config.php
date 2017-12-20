@@ -26,7 +26,8 @@ return [
     ],
     'log' => [
         'record' => true,
-        'path' => ROOT_PATH . 'logs' . DS,
+        'driver' => 'File',
+        'path' => ROOT_PATH . 'logs' . DS
     ],
     'session' => [
         'name' => 'TMP',
